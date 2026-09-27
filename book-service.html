@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Service - LOCALBIZ</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="images/svg" href="images/map-pin-home-156927234.webp">
+</head>
+
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg premium-navbar fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-icon">
+                <i class="bi bi-house-heart-fill"></i>
+            </span>
+            <span>LOCAL<span class="brand-highlight">BIZ</span></span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+            <i class="bi bi-list"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="service-details.html">
+                        Service Details
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="book-service.html">
+                        Book Service
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="my-bookings.html">
+                        My Bookings
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="navbar-actions">
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="bi bi-moon"></i>
+                </button>
+
+                <a href="login.html" class="login-link">
+                    Login
+                </a>
+
+                <a href="register.html" class="btn register-btn">
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= BOOKING HERO ================= -->
+
+<section class="booking-hero section-padding">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="section-label">
+                    BOOK A SERVICE
+                </span>
+
+                <h1>
+                    Schedule Your
+                    <br>
+                    <span>Home Service</span>
+                </h1>
+
+                <p class="hero-description">
+                    Fill in the details below and we'll match you with
+                    the perfect professional for your needs.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <img
+                    src="images/book service.png"
+                    alt="Booking Service"
+                    class="booking-hero-image"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKING FORM ================= -->
+
+<section class="booking-form-section section-padding">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <!-- Form Column -->
+
+            <div class="col-lg-8">
+
+                <form id="bookingForm" class="booking-form">
+
+                    <!-- Service Selection -->
+
+                    <div class="form-section">
+
+                        <h3>
+                            <i class="bi bi-stars"></i>
+                            Select Service
+                        </h3>
+
+                        <div class="form-group">
+
+                            <label for="serviceSelect">
+                                Choose a Service *
+                            </label>
+
+                            <select
+                                id="serviceSelect"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option value="home-cleaning">
+                                    Home Cleaning - ₹499
+                                </option>
+
+                                <option value="office-cleaning">
+                                    Office Cleaning - ₹799
+                                </option>
+
+                                <option value="carpet-cleaning">
+                                    Carpet Cleaning - ₹599
+                                </option>
+
+                                <option value="ac-service">
+                                    AC Service - ₹399
+                                </option>
+
+                                <option value="plumbing">
+                                    Plumbing - ₹299
+                                </option>
+
+                                <option value="electrician">
+                                    Electrician - ₹249
+                                </option>
+
+                                <option value="carpentry">
+                                    Carpentry - ₹349
+                                </option>
+
+                                <option value="appliance-repair">
+                                    Appliance Repair - ₹449
+                                </option>
+
+                                <option value="painting">
+                                    Painting - ₹999
+                                </option>
+
+                                <option value="pest-control">
+                                    Pest Control - ₹599
+                                </option>
+
+                                <option value="hair-salon">
+                                    Hair Salon - ₹299
+                                </option>
+
+                                <option value="spa-massage">
+                                    Spa & Massage - ₹699
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Date & Time -->
+
+                    <div class="form-section">
+
+                        <h3>
+                            <i class="bi bi-calendar-check"></i>
+                            Date & Time
+                        </h3>
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+
+                                    <label for="bookingDate">
+                                        Preferred Date *
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        id="bookingDate"
+                                        class="form-control"
+                                        required
+                                        min=""
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+
+                                    <label for="bookingTime">
+                                        Preferred Time *
+                                    </label>
+
+                                    <select
+                                        id="bookingTime"
+                                        class="form-select"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Select time slot
+                                        </option>
+
+                                        <option value="09:00">
+                                            9:00 AM - 11:00 AM
+                                        </option>
+
+                                        <option value="11:00">
+                                            11:00 AM - 1:00 PM
+                                        </option>
+
+                                        <option value="14:00">
+                                            2:00 PM - 4:00 PM
+                                        </option>
+
+                                        <option value="16:00">
+                                            4:00 PM - 6:00 PM
+                                        </option>
+
+                                        <option value="18:00">
+                                            6:00 PM - 8:00 PM
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="form-section">
+
+                        <h3>
+                            <i class="bi bi-geo-alt"></i>
+                            Location Details
+                        </h3>
+
+                        <div class="form-group">
+
+                            <label for="address">
+                                Full Address *
+                            </label>
+
+                            <textarea
+                                id="address"
+                                class="form-control"
+                                rows="3"
+                                placeholder="Enter your complete address with landmark"
+                                required
+                            ></textarea>
+
+                        </div>
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+
+                                    <label for="city">
+                                        City *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        class="form-control"
+                                        placeholder="Enter city"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+
+                                    <label for="pincode">
+                                        Pincode *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="pincode"
+                                        class="form-control"
+                                        placeholder="Enter pincode"
+                                        pattern="[0-9]{6}"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact Details -->
+
+                    <div class="form-section">
+
+                        <h3>
+                            <i class="bi bi-person"></i>
+                            Contact Details
+                        </h3>
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+
+                                    <label for="fullName">
+                                        Full Name *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="fullName"
+                                        class="form-control"
+                                        placeholder="Enter your full name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+
+                                    <label for="phone">
+                                        Phone Number *
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        class="form-control"
+                                        placeholder="Enter phone number"
+                                        pattern="[0-9]{10}"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="Enter email address"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Special Instructions -->
+
+                    <div class="form-section">
+
+                        <h3>
+                            <i class="bi bi-chat-text"></i>
+                            Special Instructions
+                        </h3>
+
+                        <div class="form-group">
+
+                            <label for="instructions">
+                                Additional Notes (Optional)
+                            </label>
+
+                            <textarea
+                                id="instructions"
+                                class="form-control"
+                                rows="3"
+                                placeholder="Any special requirements or instructions..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submit Button -->
+
+                    <div class="form-actions">
+
+                        <button type="submit" class="btn btn-premium">
+                            <i class="bi bi-check-circle"></i>
+                            Confirm Booking
+                        </button>
+
+                        <a href="services.html" class="btn btn-premium-outline">
+                            Cancel
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- Summary Column -->
+
+            <div class="col-lg-4">
+
+                <div class="booking-summary sticky-top">
+
+                    <h3>
+                        <i class="bi bi-receipt"></i>
+                        Booking Summary
+                    </h3>
+
+                    <div class="summary-item">
+
+                        <span class="summary-label">
+                            Service
+                        </span>
+
+                        <span class="summary-value" id="summaryService">
+                            Not selected
+                        </span>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span class="summary-label">
+                            Date
+                        </span>
+
+                        <span class="summary-value" id="summaryDate">
+                            Not selected
+                        </span>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span class="summary-label">
+                            Time
+                        </span>
+
+                        <span class="summary-value" id="summaryTime">
+                            Not selected
+                        </span>
+
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-item total">
+
+                        <span class="summary-label">
+                            Estimated Cost
+                        </span>
+
+                        <span class="summary-value" id="summaryPrice">
+                            ₹0
+                        </span>
+
+                    </div>
+
+                    <div class="summary-note">
+
+                        <i class="bi bi-info-circle"></i>
+
+                        <span>
+                            Final price may vary based on actual work required.
+                            Professional will confirm before starting.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRUST BADGES ================= -->
+
+<section class="trust-badges section-padding">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="trust-badge-card">
+
+                    <div class="trust-badge-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Verified Professionals</h4>
+
+                    <p>
+                        All our professionals are background checked and
+                        trained for quality service.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="trust-badge-card">
+
+                    <div class="trust-badge-icon">
+                        <i class="bi bi-cash-coin"></i>
+                    </div>
+
+                    <h4>Transparent Pricing</h4>
+
+                    <p>
+                        No hidden charges. Pay only for the work done.
+                        Prices confirmed before service.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="trust-badge-card">
+
+                    <div class="trust-badge-icon">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                    </div>
+
+                    <h4>Satisfaction Guarantee</h4>
+
+                    <p>
+                        Not satisfied? We'll re-do the service for free
+                        within 24 hours.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-4">
+
+                <a href="index.html" class="footer-brand">
+
+                    <span class="brand-icon">
+                        <i class="bi bi-house-heart-fill"></i>
+                    </span>
+
+                    LOCAL<span class="brand-highlight">BIZ</span>
+
+                </a>
+
+                <p class="footer-description">
+                    Making everyday home services simple,
+                    reliable and stress-free.
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>Company</h6>
+
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>Services</h6>
+
+                <ul>
+                    <li><a href="services.html">Cleaning</a></li>
+                    <li><a href="services.html">Repairs</a></li>
+                    <li><a href="services.html">Maintenance</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h6>Need Help?</h6>
+
+                <p class="footer-contact">
+                    <i class="bi bi-headset"></i>
+                    1800-123-4567
+                </p>
+
+                <p class="footer-contact">
+                    <i class="bi bi-envelope"></i>
+                    support@localbiz.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 LocalBiz. All rights reserved.
+            </span>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- Custom JS -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
