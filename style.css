@@ -4258,3 +4258,12 @@ input {
         font-size: 9px;
     }
 }
+
+.service-video {
+    width:50%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    margin-left:25%;
+}
